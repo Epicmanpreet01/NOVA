@@ -82,7 +82,7 @@ dataobj.close() """
 
 #inserting single contacts
 
-""" query = "INSERT INTO contacts VALUES (null,'kartik', '6239824290', 'null')"
+""" query = "INSERT INTO contacts VALUES (null,'contact_name', 'Mobile_No', 'null')"
 cursor.execute(query)
 dataobj.commit() """
 
