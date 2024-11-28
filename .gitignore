@@ -7,3 +7,4 @@ wakeup.log
 __pycache__/
 envvirtualAI/
 engine/config.py
+engine/test.py
