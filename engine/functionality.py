@@ -7,7 +7,6 @@ from playsound import playsound
 import pyautogui
 import pywhatkit as pkit
 from engine.helper import removeWords, yt_term_extraction
-from hugchat import hugchat
 from engine.onCommand import *
 from engine.config import ASSISTANT_NAME,USER_NAME,SPOTIFY_CLIENT_ID,SPOTIFY_CLIENT_SECRET,GROQ_API_KEY
 import webbrowser
