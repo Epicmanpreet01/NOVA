@@ -1,17 +1,3 @@
-""" from engine.functionality import *
-from engine.onCommand import *
-import os
-import eel
-
-def start():
-    eel.init("static")
-
-    playSound()
-
-    os.system('start chrome.exe --app="http://localhost:8000/index.html"')
-    eel.start('index.html', mode=None, host = 'localhost', block = True) """
-
-
 from engine.functionality import *
 from engine.onCommand import *
 import os
