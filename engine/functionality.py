@@ -166,7 +166,7 @@ def searchSong(query):
 def callSpotify(song_name):
     if song_name != "":
 
-        username = 'Epicmanpreet02'
+        username = 'Your_user_name'
         clientID = SPOTIFY_CLIENT_ID
         clientSecret = SPOTIFY_CLIENT_SECRET
         redirect_uri = 'http://localhost:8000/index.html'
