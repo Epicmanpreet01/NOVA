@@ -1,0 +1,156 @@
+body {
+  background-color: rgb(23, 23, 23);
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.cube {
+  position: relative;
+  width: 300px; /* Reduced from 400px */
+  height: 300px; /* Reduced from 400px */
+  transform-style: preserve-3d;
+  animation: rotateCube 15s linear infinite; /* Slowed down rotation */
+}
+
+.cube-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(134, 7, 47, 0.1); /* Slightly transparent background */
+  border: 2px solid rgba(249, 5, 82, 0.5); /* Added border for definition */
+  box-shadow: 0 0 100px rgba(249, 5, 82, 0.3); /* Softer glow */
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.cube-face:nth-child(1) { transform: translateZ(150px); }
+.cube-face:nth-child(2) { transform: rotateY(90deg) translateZ(150px); }
+.cube-face:nth-child(3) { transform: rotateY(180deg) translateZ(150px); }
+.cube-face:nth-child(4) { transform: rotateY(-90deg) translateZ(150px); }
+.cube-face:nth-child(5) { transform: rotateX(90deg) translateZ(150px); }
+.cube-face:nth-child(6) { transform: rotateX(-90deg) translateZ(150px); }
+
+@keyframes rotateCube {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+
+#TextInput {
+    background-color: #181818a8;
+    border-color: rgb(225, 11, 11);
+    box-shadow: 0 0 10px rgb(222, 13, 13),
+      inset 0 0 0px rgb(227, 8, 8);
+    border-radius: 8px;
+    color: white;
+    padding: 3px 0px 3px 20px;
+    margin: 0px 20%;
+  }
+  
+  .input-field {
+    background-color: transparent;
+    border: none;
+    width: 95%;
+    outline: none;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  
+  .glow-on-hover {
+    width: 35px;
+    height: 35px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    padding: 0px;
+    margin-left: 10px;
+  }
+  
+  .glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #db0101, #a70000, #930101, #530000, #680101, #580101, #480303, #3e0303);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .glow-on-hover:active {
+    color: #181818a8
+  }
+  
+  .glow-on-hover:active:after {
+    background: transparent;
+  }
+  
+  .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  
+  .glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 400% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+}
+
+
+
+.chat-canvas{
+  background-color: #323131
+}
+
+.receiver_message{
+  padding: 8px;
+  border: 2px solid rgba(249, 5, 82, 0.5);
+  border-radius: 0px 15px 15px 20px;
+  width: auto;
+  color: white;
+  background-color: rgba(134, 7, 47, 0.1);
+}
+
+.sender_message{
+  padding: 8px;
+  border: 1px solid rgba(249, 5, 82, 0.5);
+  border-radius: 15px 15px 0px 20px;
+  width: auto;
+  color: white;
+  background-color: rgba(134, 7, 47, 0.1);
+}
+.width-size{
+  max-width: 80%;
+  width: auto;
+}

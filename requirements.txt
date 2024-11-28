@@ -1,0 +1,12 @@
+eel==0.16.0
+groq==0.3.1
+playsound==1.2.2
+pvporcupine==2.2.1
+pyaudio==0.2.13
+pyautogui==0.9.54
+pyttsx3==2.90
+pywhatkit==5.4
+python-speech-recognition==3.8.1
+pywin32==306
+spotipy==2.23.0
+multiprocessing==0.70.14

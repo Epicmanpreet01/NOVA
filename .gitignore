@@ -1,0 +1,9 @@
+
+contacts.csv
+nova.db
+wakeup.log
+.cache
+.env
+__pycache__/
+envvirtualAI/
+engine/config.py
