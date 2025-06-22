@@ -111,15 +111,3 @@ def allCommands(message: Optional[str] = None):
         return f"Sorry, I encountered an error: {str(e)}"
     finally:
         eel.DisplayAI()
-
-
-#aborted due to bad practice
-""" def speechInterrupt(query):
-    try:
-        p = Process(target=Speech, args=(query,))
-        p.start()
-        if autogui.hotkey('ctrl', 's'):
-            p.terminate()
-        p.join()
-    except Exception as e:
-        print(f"Error in speech interrupt: {e}") """
