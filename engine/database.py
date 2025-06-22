@@ -44,7 +44,7 @@ query = "CREATE TABLE IF NOT EXISTS web_command(id integer primary key, name VAR
 cursor.execute(query)
 
 #inserting into web_command
-""" query = "INSERT INTO web_command VALUES (null,'pornhub', 'https://www.pornhub.com/')"
+""" query = "INSERT INTO web_command VALUES (null,'', '')"
 cursor.execute(query)
 dataobj.commit()
  """
