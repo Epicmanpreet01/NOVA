@@ -8,5 +8,5 @@ pyttsx3==2.90
 pywhatkit==5.4
 SpeechRecognition==3.8.1
 pywin32==306
-spotipy==2.23.0
+spotipy==2.25.1
 multiprocessing==0.70.14
