@@ -6,7 +6,7 @@ from engine.audio_engine.models import kokoro_pipeline
 def tts_kokoro_blocking(text: str):
     generator = kokoro_pipeline(
         text,
-        voice="af_nicole",
+        voice="af_heart",
         speed=1
     )
 
