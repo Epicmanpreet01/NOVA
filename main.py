@@ -8,6 +8,8 @@ import threading
 
 import queue
 
+import engine.audio_engine.models as models
+
 _ui_queue = queue.Queue()
 
 def _ui_loop():

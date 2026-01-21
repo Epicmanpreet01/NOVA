@@ -6,42 +6,33 @@ from time import sleep
 
 #text to speech
 def Speech(text):
+    from engine.audio_engine.tts import tts_kokoro_blocking
+
     text = str(text)
-    engine = pyttsx3.init()
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[1].id)
-    engine.setProperty('rate', 150)
-    engine.setProperty('volume', 0.5)
     eel.DisplayMessage(text)
-    engine.say(text)
+
+    tts_kokoro_blocking(text)
+
     eel.receiverText(text)
-    engine.runAndWait()
     eel.commandFinished()
+
+
 
 #speech to text
 @eel.expose
 def takeCommand():
-    
-    
-    r = sr.Recognizer()
+    from engine.audio_engine.asr import listen_once_whisper
 
-    with sr.Microphone() as source:
-        eel.DisplayMessage("listening....")
-        r.pause_threshold = 1
-        r.adjust_for_ambient_noise(source)
+    eel.DisplayMessage("listening...")
 
-        audio = r.listen(source,10,6)
-    
-    try:
-        eel.DisplayMessage("recognizing")
-        query = r.recognize_google(audio, language='en-in')
-        eel.DisplayMessage(query)
-        sleep(2)
-        
-    except Exception as e:
+    text = listen_once_whisper()
+    if not text:
         return ""
-    
-    return query.lower()
+
+    eel.DisplayMessage(text)
+    return text.lower().strip()
+
+
 
 
 
