@@ -1,12 +1,30 @@
-eel
-groq
-pvporcupine
-pyaudio
-pyautogui
-pyttsx3
-pywhatkit
-SpeechRecognition
-pywin32
-spotipy
+# Core runtime
 numpy
+torch
+sounddevice
+pillow
+
+# Transformers / Models
+transformers
+accelerate
+sentencepiece
+
+# Audio
+kokoro
+pyaudio
+pvporcupine
+
+# UI
+eel
+
+# LLM
+groq
+
+# Automation / OS control
+pyautogui
+pywin32
 pygetwindow
+
+# Media & Web
+pywhatkit
+spotipy
