@@ -6,11 +6,13 @@ import os
 import eel
 from engine.config import PICOVOICE_ACCESS_KEY
 from time import sleep
+from typing import Callable
 
 
 class WakeWordService:
-    def __init__(self):
+    def __init__(self, on_detected: Callable[[], None]):
         self.running = True
+        self.on_detected_callback = on_detected
         self.porcupine = None
         self.audio = None
         self.stream = None
@@ -59,7 +61,7 @@ class WakeWordService:
 
                 if self.porcupine.process(pcm) >= 0:
                     print("Wake word detected")
-                    eel.triggerAssistant()
+                    self.on_detected()
                     sleep(2)
 
         except Exception as e:
@@ -70,7 +72,8 @@ class WakeWordService:
 
     def on_detected(self):
         print("Wake word detected")
-        eel.triggerAssistant()
+        if self.on_detected_callback:
+            self.on_detected_callback()
 
     def stop(self):
         self.running = False

@@ -16,6 +16,7 @@ def Speech(text):
     engine.say(text)
     eel.receiverText(text)
     engine.runAndWait()
+    eel.commandFinished()
 
 #speech to text
 @eel.expose
@@ -94,7 +95,7 @@ def allCommands(message: Optional[str] = None):
                 playPause()
                 
         elif "nova stop" in query:
-            eel.DisplayAI()
+            eel.commandFinished()
             return
         elif "clip that" in query:
             from engine.functionality import CLIPPING
@@ -110,4 +111,4 @@ def allCommands(message: Optional[str] = None):
         print(f"Error processing command: {e}")
         return f"Sorry, I encountered an error: {str(e)}"
     finally:
-        eel.DisplayAI()
+        eel.commandFinished()

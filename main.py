@@ -6,10 +6,27 @@ import os
 import eel
 import threading
 
+import queue
+
+_ui_queue = queue.Queue()
+
+def _ui_loop():
+    while True:
+        fn = _ui_queue.get()
+        try:
+            fn()
+        except Exception as e:
+            print("UI error:", e)
+
+threading.Thread(target=_ui_loop, daemon=True).start()
+
+def trigger_ui():
+    _ui_queue.put(lambda: eel.triggerAssistant())
+
 
 def start():
     eel.init("static")
-    wake_service = WakeWordService()
+    wake_service = WakeWordService(on_detected=trigger_ui)
     wake_thread = threading.Thread(
         target=wake_service.start,
         daemon=True
