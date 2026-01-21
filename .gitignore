@@ -7,3 +7,4 @@ __pycache__/
 engine/config.py
 engine/test.py
 .novaEnv
+wake_word.log
