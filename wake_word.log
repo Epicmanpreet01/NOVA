@@ -1,0 +1,32 @@
+2026-01-21 20:01:55,006 - INFO - 127.0.0.1 - - [2026-01-21 20:01:55] "GET /index.html HTTP/1.1" 200 6046 0.001000
+2026-01-21 20:01:55,025 - INFO - 127.0.0.1 - - [2026-01-21 20:01:55] "GET /assets/vendore/texllate/animate.css HTTP/1.1" 200 64670 0.002434
+2026-01-21 20:01:55,028 - INFO - 127.0.0.1 - - [2026-01-21 20:01:55] "GET /style.css HTTP/1.1" 200 3929 0.001002
+2026-01-21 20:01:55,031 - INFO - 127.0.0.1 - - [2026-01-21 20:01:55] "GET /assets/vendore/texllate/jquery.fittext.js HTTP/1.1" 200 1382 0.000997
+2026-01-21 20:01:55,033 - INFO - 127.0.0.1 - - [2026-01-21 20:01:55] "GET /assets/vendore/texllate/jquery.lettering.js HTTP/1.1" 200 2052 0.002012
+2026-01-21 20:01:55,035 - INFO - 127.0.0.1 - - [2026-01-21 20:01:55] "GET /script.js HTTP/1.1" 200 8598 0.000997
+2026-01-21 20:01:55,038 - INFO - 127.0.0.1 - - [2026-01-21 20:01:55] "GET /main.js HTTP/1.1" 200 3187 0.002001
+2026-01-21 20:01:55,039 - INFO - 127.0.0.1 - - [2026-01-21 20:01:55] "GET /connector.js HTTP/1.1" 200 1558 0.000000
+2026-01-21 20:01:55,041 - INFO - 127.0.0.1 - - [2026-01-21 20:01:55] "GET /eel.js HTTP/1.1" 200 6064 0.000000
+2026-01-21 20:01:57,585 - INFO - Wake word service stopped
+2026-01-21 20:02:20,287 - INFO - 127.0.0.1 - - [2026-01-21 20:02:20] "GET /index.html HTTP/1.1" 200 6046 0.001258
+2026-01-21 20:02:20,309 - INFO - 127.0.0.1 - - [2026-01-21 20:02:20] "GET /assets/vendore/texllate/animate.css HTTP/1.1" 200 64670 0.000996
+2026-01-21 20:02:20,311 - INFO - 127.0.0.1 - - [2026-01-21 20:02:20] "GET /style.css HTTP/1.1" 200 3929 0.001506
+2026-01-21 20:02:20,628 - INFO - 127.0.0.1 - - [2026-01-21 20:02:20] "GET /assets/vendore/texllate/jquery.fittext.js HTTP/1.1" 200 1382 0.001007
+2026-01-21 20:02:20,630 - INFO - 127.0.0.1 - - [2026-01-21 20:02:20] "GET /assets/vendore/texllate/jquery.lettering.js HTTP/1.1" 200 2052 0.001007
+2026-01-21 20:02:20,631 - INFO - 127.0.0.1 - - [2026-01-21 20:02:20] "GET /script.js HTTP/1.1" 200 8598 0.000988
+2026-01-21 20:02:20,632 - INFO - 127.0.0.1 - - [2026-01-21 20:02:20] "GET /main.js HTTP/1.1" 200 3187 0.001173
+2026-01-21 20:02:20,634 - INFO - 127.0.0.1 - - [2026-01-21 20:02:20] "GET /connector.js HTTP/1.1" 200 1558 0.000000
+2026-01-21 20:02:20,637 - INFO - 127.0.0.1 - - [2026-01-21 20:02:20] "GET /eel.js HTTP/1.1" 200 6064 0.000000
+2026-01-21 20:02:22,787 - INFO - Wake word service stopped
+2026-01-21 20:03:29,788 - INFO - 127.0.0.1 - - [2026-01-21 20:03:29] "GET /index.html HTTP/1.1" 200 6046 0.001406
+2026-01-21 20:03:29,809 - INFO - 127.0.0.1 - - [2026-01-21 20:03:29] "GET /assets/vendore/texllate/animate.css HTTP/1.1" 200 64670 0.000508
+2026-01-21 20:03:29,815 - INFO - 127.0.0.1 - - [2026-01-21 20:03:29] "GET /style.css HTTP/1.1" 200 3929 0.000000
+2026-01-21 20:03:29,818 - INFO - 127.0.0.1 - - [2026-01-21 20:03:29] "GET /assets/vendore/texllate/jquery.fittext.js HTTP/1.1" 200 1382 0.002203
+2026-01-21 20:03:29,821 - INFO - 127.0.0.1 - - [2026-01-21 20:03:29] "GET /assets/vendore/texllate/jquery.lettering.js HTTP/1.1" 200 2052 0.001357
+2026-01-21 20:03:29,822 - INFO - 127.0.0.1 - - [2026-01-21 20:03:29] "GET /script.js HTTP/1.1" 200 8598 0.001216
+2026-01-21 20:03:29,824 - INFO - 127.0.0.1 - - [2026-01-21 20:03:29] "GET /main.js HTTP/1.1" 200 3187 0.000000
+2026-01-21 20:03:29,826 - INFO - 127.0.0.1 - - [2026-01-21 20:03:29] "GET /connector.js HTTP/1.1" 200 1558 0.001096
+2026-01-21 20:03:29,828 - INFO - 127.0.0.1 - - [2026-01-21 20:03:29] "GET /eel.js HTTP/1.1" 200 6064 0.000999
+2026-01-21 20:03:42,024 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-21 20:03:42,175 - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Work\\Projects\\AI\\NOVA\\.novaEnv\\lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-01-21 20:03:42,176 - INFO - Using writeable comtypes cache directory: 'C:\Work\Projects\AI\NOVA\.novaEnv\lib\site-packages\comtypes\gen'

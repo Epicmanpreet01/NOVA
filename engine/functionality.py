@@ -1,9 +1,8 @@
 from pipes import quote
 import subprocess
 import pyautogui as autogui
-import win32gui
 from groq import Groq
-from playsound import playsound
+import winsound
 import pyautogui
 import pywhatkit as pkit
 from engine.helper import removeWords, yt_term_extraction
@@ -22,8 +21,20 @@ cursor = dataobj.cursor()
 #startup sound
 @eel.expose
 def playSound():
-    music_directory = "static\\assets\\auidio\\start_sound.mp3"
-    playsound(music_directory)
+    try:
+        base_dir = os.path.dirname(os.path.dirname(__file__))
+        sound_path = os.path.join(
+            base_dir,
+            "static", "assets", "audio", "start_sound.wav"
+        )
+
+        winsound.PlaySound(
+            sound_path,
+            winsound.SND_FILENAME | winsound.SND_ASYNC
+        )
+
+    except Exception as e:
+        print(f"Startup sound error: {e}")
 
 #handles the opening of softwares or websites
 @eel.expose
@@ -216,7 +227,7 @@ def nextPrev(query):
 #chatbot
 def chatBot(query):
     client = Groq(
-        api_key=os.environ.get(GROQ_API_KEY),
+        api_key=GROQ_API_KEY,
     )
 
     chat_completion = client.chat.completions.create(
@@ -230,9 +241,16 @@ def chatBot(query):
                 "content": query,
             }
         ],
-        model="llama3-8b-8192",
+        model="llama-3.3-70b-versatile",
+        temperature=1,
+        max_completion_tokens=1024,
+        top_p=1,
+        stream=True,
+        stop=None
     )
-    response = chat_completion.choices[0].message.content
+    response = ''
+    for chunk in chat_completion:
+        response += chunk.choices[0].delta.content or ''
     print(response)
     Speech(response)
 
