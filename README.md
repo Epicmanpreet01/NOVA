@@ -192,7 +192,6 @@ eel
 - Emotion-aware voice synthesis
 
 ---
-
 ## Disclaimer
 
 This project is for personal and experimental use.
